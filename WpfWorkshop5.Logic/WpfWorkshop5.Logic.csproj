@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WpfWorkshop5.Models\WpfWorkshop5.Models.csproj" />
+    <ProjectReference Include="..\WpfWorkshop5.Repository\WpfWorkshop5.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

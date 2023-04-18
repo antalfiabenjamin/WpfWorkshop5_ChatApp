@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\WpfWorkshop5.Logic\WpfWorkshop5.Logic.csproj" />
+    <ProjectReference Include="..\WpfWorkshop5.Models\WpfWorkshop5.Models.csproj" />
+    <ProjectReference Include="..\WpfWorkshop5.Repository\WpfWorkshop5.Repository.csproj" />
   </ItemGroup>
 
 </Project>

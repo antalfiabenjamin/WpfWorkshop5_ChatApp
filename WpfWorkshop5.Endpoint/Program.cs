@@ -1,6 +1,12 @@
+using WpfWorkshop5.Logic;
+using WpfWorkshop5.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddTransient<IRepository<Message>, MessageRepository>();
+builder.Services.AddTransient<IMessageLogic, MessageLogic>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
