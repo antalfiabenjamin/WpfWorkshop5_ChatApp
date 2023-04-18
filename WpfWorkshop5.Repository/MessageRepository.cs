@@ -10,10 +10,6 @@ namespace WpfWorkshop5.Repository
 {
     public class MessageRepository : Repository<Message>, IRepository<Message>
     {
-        public List<Message> Messages { get; set; }
-        public MessageRepository(IEnumerable<Message> items) : base(items) 
-        {
-            Messages = items.ToList();
-        }
+        public MessageRepository(IEnumerable<Message> items) : base(items) { }
     }
 }

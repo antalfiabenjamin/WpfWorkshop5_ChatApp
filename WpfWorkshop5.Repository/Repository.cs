@@ -3,25 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WpfWorkshop5.Logic;
 
 namespace WpfWorkshop5.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        protected List<T> items;
+        protected static List<T> items = new List<T>();
         public Repository(IEnumerable<T> items)
         {
-            this.items = items.ToList();
+            items = items.ToList();
         }
 
         public void Create(T item)
         {
-            this.items.Add(item);
+            items.Add(item);
         }
 
         public IEnumerable<T> ReadAll()
         {
-            return this.items;
+            return items;
         }
     }
 }
