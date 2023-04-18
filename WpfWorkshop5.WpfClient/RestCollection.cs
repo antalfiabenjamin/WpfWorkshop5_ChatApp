@@ -295,8 +295,11 @@ namespace WpfWorkshop5.WpfClient
                 this.notify = new NotifyService(baseurl + hub);
                 this.notify.AddHandler<T>(type.Name + "Created", (T item) =>
                 {
-                    items.Add(item);
-                    CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+                    Application.Current.Dispatcher.Invoke(() =>
+                    {
+                        items.Add(item);
+                        CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+                    });
                 });
                 this.notify.AddHandler<T>(type.Name + "Deleted", (T item) =>
                 {

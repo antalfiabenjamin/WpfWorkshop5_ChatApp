@@ -49,7 +49,7 @@ namespace WpfWorkshop5.WpfClient
         {
             if (!IsInDesignMode)
             {
-                Messages = new RestCollection<Message>("https://localhost:7281/", "message");
+                Messages = new RestCollection<Message>("https://localhost:7281/", "message", "hub");
                 SendChatCommand = new RelayCommand(
                     () => Messages.Add(new Message(Message, DateTime.Now, Sender))
                     );
