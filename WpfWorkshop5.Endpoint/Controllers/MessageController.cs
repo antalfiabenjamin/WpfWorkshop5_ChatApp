@@ -3,7 +3,7 @@ using WpfWorkshop5.Logic;
 
 namespace WpfWorkshop5.Endpoint.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class MessageController : ControllerBase
     {
